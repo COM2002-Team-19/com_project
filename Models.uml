@@ -103,4 +103,5 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="__-Ym4pz2Eeaw46ULveiiKg" name="patient" type="_gziJ4Jz1Eeaw46ULveiiKg" association="__-X_0Jz2Eeaw46ULveiiKg"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="__-ZN8Jz2Eeaw46ULveiiKg" name="make payment" type="_7bT5wJz1Eeaw46ULveiiKg" association="__-X_0Jz2Eeaw46ULveiiKg"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bHGj0Jz7EeaFAthCa9dQaA" name="Example class"/>
 </uml:Model>
