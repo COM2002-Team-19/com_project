@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_vWpnUJzwEeaw46ULveiiKg" name="RootElement">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_dfgxMJzxEeaw46ULveiiKg" name="Employer"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_tFRlIJzxEeaw46ULveiiKg" name="Secretary" isLeaf="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_qfmG4JzyEeaw46ULveiiKg" general="_dfgxMJzxEeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_yWQWkJzxEeaw46ULveiiKg" name="Partner">
+    <generalization xmi:type="uml:Generalization" xmi:id="_tO5lwJzyEeaw46ULveiiKg" general="_dfgxMJzxEeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_2Qf-kJzxEeaw46ULveiiKg" name="Dentist">
+    <generalization xmi:type="uml:Generalization" xmi:id="_GkiYUJzzEeaw46ULveiiKg" general="_yWQWkJzxEeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_2YFNQJzxEeaw46ULveiiKg" name="Hygenist">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Ff_LEJzzEeaw46ULveiiKg" general="_yWQWkJzxEeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_JuikQJz1Eeaw46ULveiiKg" name="System">
+    <packagedElement xmi:type="uml:Package" xmi:id="_-gZ34Jz0Eeaw46ULveiiKg" name="Appointments">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_wgmKkJzzEeaw46ULveiiKg" name="Cancel Appointment"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_zr_vkJzzEeaw46ULveiiKg" name="View Appointment"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_r_2jQJzzEeaw46ULveiiKg" name="Book Appointments"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_NeH0YJz1Eeaw46ULveiiKg" name="Registration">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_20FFYJz0Eeaw46ULveiiKg" name="Register">
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_n_dlEJz1Eeaw46ULveiiKg" name="ExtensionPoint1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_aMSJEJz1Eeaw46ULveiiKg" name="Subscribe to Health Plan">
+        <extend xmi:type="uml:Extend" xmi:id="_n_bI0Jz1Eeaw46ULveiiKg" extendedCase="_20FFYJz0Eeaw46ULveiiKg" extensionLocation="_n_dlEJz1Eeaw46ULveiiKg"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_s3TdwJz1Eeaw46ULveiiKg" name="Payments">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_11aBMJz1Eeaw46ULveiiKg" name="Check Fees">
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_4ZM-MJz2Eeaw46ULveiiKg" name="ExtensionPoint1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_4ieEYJz1Eeaw46ULveiiKg" name="Print Reciept">
+        <extend xmi:type="uml:Extend" xmi:id="_4ZMXIJz2Eeaw46ULveiiKg" extendedCase="_11aBMJz1Eeaw46ULveiiKg" extensionLocation="_4ZM-MJz2Eeaw46ULveiiKg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_7bT5wJz1Eeaw46ULveiiKg" name="Make Payment"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_LtRFUJz2Eeaw46ULveiiKg" name="Record Results"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_gziJ4Jz1Eeaw46ULveiiKg" name="Patient"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_jf1_IJz1Eeaw46ULveiiKg" name="Bank"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UAm0gJz2Eeaw46ULveiiKg" memberEnd="_UBuO0Jz2Eeaw46ULveiiKg _UBwEAJz2Eeaw46ULveiiKg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UBYQkJz2Eeaw46ULveiiKg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UBY3oJz2Eeaw46ULveiiKg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UBuO0Jz2Eeaw46ULveiiKg" name="patient" type="_gziJ4Jz1Eeaw46ULveiiKg" association="_UAm0gJz2Eeaw46ULveiiKg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UBwEAJz2Eeaw46ULveiiKg" name="register" type="_20FFYJz0Eeaw46ULveiiKg" association="_UAm0gJz2Eeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_e2djwJz2Eeaw46ULveiiKg" memberEnd="_e2ex4pz2Eeaw46ULveiiKg _e2fY8Jz2Eeaw46ULveiiKg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_e2ex4Jz2Eeaw46ULveiiKg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e2ex4Zz2Eeaw46ULveiiKg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_e2ex4pz2Eeaw46ULveiiKg" name="view appointment" type="_zr_vkJzzEeaw46ULveiiKg" association="_e2djwJz2Eeaw46ULveiiKg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_e2fY8Jz2Eeaw46ULveiiKg" name="employer" type="_dfgxMJzxEeaw46ULveiiKg" association="_e2djwJz2Eeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gYTJ8Jz2Eeaw46ULveiiKg" memberEnd="_gYUYEZz2Eeaw46ULveiiKg _gYU_IJz2Eeaw46ULveiiKg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gYTxAJz2Eeaw46ULveiiKg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gYUYEJz2Eeaw46ULveiiKg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gYUYEZz2Eeaw46ULveiiKg" name="cancel appointment" type="_wgmKkJzzEeaw46ULveiiKg" association="_gYTJ8Jz2Eeaw46ULveiiKg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gYU_IJz2Eeaw46ULveiiKg" name="secretary" type="_tFRlIJzxEeaw46ULveiiKg" association="_gYTJ8Jz2Eeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hR7goJz2Eeaw46ULveiiKg" memberEnd="_hR984Zz2Eeaw46ULveiiKg _hR-j8Jz2Eeaw46ULveiiKg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hR9V0Jz2Eeaw46ULveiiKg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hR984Jz2Eeaw46ULveiiKg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_hR984Zz2Eeaw46ULveiiKg" name="book appointments" type="_r_2jQJzzEeaw46ULveiiKg" association="_hR7goJz2Eeaw46ULveiiKg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_hR-j8Jz2Eeaw46ULveiiKg" name="secretary" type="_tFRlIJzxEeaw46ULveiiKg" association="_hR7goJz2Eeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ij2bgJz2Eeaw46ULveiiKg" memberEnd="_ij3poJz2Eeaw46ULveiiKg _ij3poZz2Eeaw46ULveiiKg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ij3CkJz2Eeaw46ULveiiKg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ij3CkZz2Eeaw46ULveiiKg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ij3poJz2Eeaw46ULveiiKg" name="patient" type="_gziJ4Jz1Eeaw46ULveiiKg" association="_ij2bgJz2Eeaw46ULveiiKg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ij3poZz2Eeaw46ULveiiKg" name="book appointments" type="_r_2jQJzzEeaw46ULveiiKg" association="_ij2bgJz2Eeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_lYJIEJz2Eeaw46ULveiiKg" memberEnd="_lYKWMpz2Eeaw46ULveiiKg _lYK9QJz2Eeaw46ULveiiKg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lYKWMJz2Eeaw46ULveiiKg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lYKWMZz2Eeaw46ULveiiKg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_lYKWMpz2Eeaw46ULveiiKg" name="record results" type="_LtRFUJz2Eeaw46ULveiiKg" association="_lYJIEJz2Eeaw46ULveiiKg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_lYK9QJz2Eeaw46ULveiiKg" name="partner" type="_yWQWkJzxEeaw46ULveiiKg" association="_lYJIEJz2Eeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uTyNYJz2Eeaw46ULveiiKg" memberEnd="_uTzbgZz2Eeaw46ULveiiKg _uT0CkJz2Eeaw46ULveiiKg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uTy0cJz2Eeaw46ULveiiKg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uTzbgJz2Eeaw46ULveiiKg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_uTzbgZz2Eeaw46ULveiiKg" name="check fees" type="_11aBMJz1Eeaw46ULveiiKg" association="_uTyNYJz2Eeaw46ULveiiKg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_uT0CkJz2Eeaw46ULveiiKg" name="secretary" type="_tFRlIJzxEeaw46ULveiiKg" association="_uTyNYJz2Eeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_9qre4Jz2Eeaw46ULveiiKg" memberEnd="_9qstAZz2Eeaw46ULveiiKg _9qstApz2Eeaw46ULveiiKg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9qsF8Jz2Eeaw46ULveiiKg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9qstAJz2Eeaw46ULveiiKg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_9qstAZz2Eeaw46ULveiiKg" name="bank" type="_jf1_IJz1Eeaw46ULveiiKg" association="_9qre4Jz2Eeaw46ULveiiKg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_9qstApz2Eeaw46ULveiiKg" name="make payment" type="_7bT5wJz1Eeaw46ULveiiKg" association="_9qre4Jz2Eeaw46ULveiiKg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__-X_0Jz2Eeaw46ULveiiKg" memberEnd="__-Ym4pz2Eeaw46ULveiiKg __-ZN8Jz2Eeaw46ULveiiKg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__-Ym4Jz2Eeaw46ULveiiKg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__-Ym4Zz2Eeaw46ULveiiKg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="__-Ym4pz2Eeaw46ULveiiKg" name="patient" type="_gziJ4Jz1Eeaw46ULveiiKg" association="__-X_0Jz2Eeaw46ULveiiKg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="__-ZN8Jz2Eeaw46ULveiiKg" name="make payment" type="_7bT5wJz1Eeaw46ULveiiKg" association="__-X_0Jz2Eeaw46ULveiiKg"/>
+  </packagedElement>
+</uml:Model>
