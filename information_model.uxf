@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>9</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>873</x>
-      <y>54</y>
-      <w>243</w>
-      <h>288</h>
+      <x>1010</x>
+      <y>10</y>
+      <w>270</w>
+      <h>280</h>
     </coordinates>
     <panel_attributes>Patient
 --
 title : String
 forename : String
 surname : String
-dateBirth : String
+dateBirth : Date
 contactPhoneNo : String
 --
 getTitle() : String
 getForename() : String
 getSurname() : String
-getDateBirth() : String
+getDateBirth() : Date
 getContactPhoneNo() : String
 setTitle(title : String)
 setForename(forename : String)
 setSurname(surname : String)
-setDateBirth(dateBirth : String)
 setContactPhoneNo(phoneNo : String)
 </panel_attributes>
     <additional_attributes/>
@@ -33,10 +32,10 @@ setContactPhoneNo(phoneNo : String)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>972</x>
+      <x>1120</x>
       <y>450</y>
-      <w>189</w>
-      <h>252</h>
+      <w>210</w>
+      <h>280</h>
     </coordinates>
     <panel_attributes>Address
 --
@@ -61,10 +60,10 @@ setPostCode(postCode : String)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1062</x>
-      <y>333</y>
-      <w>99</w>
-      <h>135</h>
+      <x>1220</x>
+      <y>280</y>
+      <w>110</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1..* 
@@ -72,15 +71,15 @@ r1=householders
  
 m2=1
 r2=domicile</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>729</x>
+      <x>850</x>
       <y>450</y>
-      <w>216</w>
-      <h>126</h>
+      <w>240</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>HealthCarePlan
 --
@@ -96,10 +95,10 @@ setMonthlyPayment(payment : Real) </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>828</x>
-      <y>333</y>
-      <w>144</w>
-      <h>135</h>
+      <x>960</x>
+      <y>280</y>
+      <w>160</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -108,25 +107,25 @@ m2=0..1
 r2=paymentPlans
 
 </panel_attributes>
-    <additional_attributes>110.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;170.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>54</y>
-      <w>189</w>
-      <h>117</h>
+      <x>520</x>
+      <y>10</y>
+      <w>210</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Appointment
 --
-date: String
-startTime: Integer
-endTime:Integer
+date : Date
+startTime : Time
+endTime : Time
 --
-getDate() : String
-getStartTime() : Integer
-getEndTime() : Integer
+getDate() : Date
+getStartTime() : Time
+getEndTime() : Time
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -134,24 +133,27 @@ getEndTime() : Integer
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>54</y>
-      <w>189</w>
-      <h>63</h>
+      <y>10</y>
+      <w>260</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Calendar
 --
 partnerName : String
 --
-getPartner() : String</panel_attributes>
+getPartner() : String
+view() : Appointment []
+getNextAppointment() : Appointment
+getDaysAppointments() : Appointment []</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>45</y>
-      <w>270</w>
-      <h>45</h>
+      <x>250</x>
+      <y>0</y>
+      <w>290</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -159,18 +161,18 @@ r1=partner
 m2=0..*
 r2=appointments
 </panel_attributes>
-    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>612</x>
-      <y>45</y>
-      <w>279</w>
-      <h>45</h>
+      <x>720</x>
+      <y>0</y>
+      <w>310</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=0..n
+m1=0..*
 r1=appointments
 m2=1
 r2=patient
@@ -180,10 +182,10 @@ r2=patient
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>315</y>
-      <w>189</w>
-      <h>135</h>
+      <x>520</x>
+      <y>300</y>
+      <w>210</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Treatment
 --
@@ -199,17 +201,136 @@ setCost(cost : Real)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>513</x>
-      <y>162</y>
-      <w>90</w>
-      <h>171</h>
+      <x>610</x>
+      <y>130</y>
+      <w>100</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1
+m1=0..*
 r1=appointment
 m2=0..*
 r2=treatments
 </panel_attributes>
     <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>750</x>
+      <y>130</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Time will be a custom class 
+where we'll store info as ints and 
+provide methods to manipulate
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>60</y>
+      <w>280</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>340</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>350</y>
+      <w>50</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>480</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>430</y>
+      <w>130</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;90.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>480</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Coverage
+--
+numOfTreaments : Int
+--
+getNumOfT() : Int
+setNumOfT(n : Int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>820</x>
+      <y>260</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>PlanUsage
+--
+numUsed : Int
+--
+getNumUsed() : Int
+setNumUsed(n : Int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>340</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;50.0</additional_attributes>
   </element>
 </diagram>
