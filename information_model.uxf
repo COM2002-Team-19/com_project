@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>10</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
-      <y>10</y>
-      <w>270</w>
-      <h>280</h>
+      <x>909</x>
+      <y>9</y>
+      <w>243</w>
+      <h>252</h>
     </coordinates>
     <panel_attributes>Patient
 --
 title : String
 forename : String
 surname : String
-dateBirth : Date
+dateOfBirth : Date
 contactPhoneNo : String
 --
 getTitle() : String
 getForename() : String
 getSurname() : String
-getDateBirth() : Date
+getDateOfBirth() : Date
 getContactPhoneNo() : String
 setTitle(title : String)
 setForename(forename : String)
@@ -32,10 +32,10 @@ setContactPhoneNo(phoneNo : String)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1120</x>
-      <y>450</y>
-      <w>210</w>
-      <h>280</h>
+      <x>1008</x>
+      <y>405</y>
+      <w>243</w>
+      <h>252</h>
     </coordinates>
     <panel_attributes>Address
 --
@@ -50,7 +50,7 @@ getStreet() : String
 getDistrict() : String
 getCity() : String
 getPostCode() : String
-setHouseNumber(houseNumber : integer)
+setHouseNumber(houseNumber : Integer)
 setStreet(street : String)
 setDistrict(district : String)
 setCity(city : String)
@@ -60,10 +60,10 @@ setPostCode(postCode : String)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1220</x>
-      <y>280</y>
-      <w>110</w>
-      <h>190</h>
+      <x>1098</x>
+      <y>252</y>
+      <w>99</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1..* 
@@ -76,10 +76,10 @@ r2=domicile</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>850</x>
-      <y>450</y>
-      <w>240</w>
-      <h>140</h>
+      <x>765</x>
+      <y>405</y>
+      <w>216</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>HealthCarePlan
 --
@@ -95,10 +95,10 @@ setMonthlyPayment(payment : Real) </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
-      <y>280</y>
-      <w>160</w>
-      <h>190</h>
+      <x>864</x>
+      <y>252</y>
+      <w>144</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -112,10 +112,10 @@ r2=paymentPlans
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>10</y>
-      <w>210</w>
-      <h>130</h>
+      <x>468</x>
+      <y>9</y>
+      <w>189</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>Appointment
 --
@@ -133,16 +133,16 @@ getEndTime() : Time
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>10</y>
-      <w>260</w>
-      <h>130</h>
+      <y>9</y>
+      <w>234</w>
+      <h>117</h>
     </coordinates>
-    <panel_attributes>Calendar
+    <panel_attributes>Partner
 --
 partnerName : String
 --
 getPartner() : String
-view() : Appointment []
+viewCal() : Appointment []
 getNextAppointment() : Appointment
 getDaysAppointments() : Appointment []</panel_attributes>
     <additional_attributes/>
@@ -150,10 +150,10 @@ getDaysAppointments() : Appointment []</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>250</x>
+      <x>225</x>
       <y>0</y>
-      <w>290</w>
-      <h>50</h>
+      <w>261</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -166,10 +166,10 @@ r2=appointments
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
+      <x>648</x>
       <y>0</y>
-      <w>310</w>
-      <h>50</h>
+      <w>279</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
@@ -182,10 +182,10 @@ r2=patient
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>300</y>
-      <w>210</w>
-      <h>150</h>
+      <x>468</x>
+      <y>270</y>
+      <w>189</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>Treatment
 --
@@ -201,10 +201,10 @@ setCost(cost : Real)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>610</x>
-      <y>130</y>
-      <w>100</w>
-      <h>190</h>
+      <x>549</x>
+      <y>117</y>
+      <w>90</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
@@ -217,10 +217,10 @@ r2=treatments
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>750</x>
-      <y>130</y>
-      <w>220</w>
-      <h>70</h>
+      <x>675</x>
+      <y>117</y>
+      <w>198</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>Time will be a custom class 
 where we'll store info as ints and 
@@ -231,10 +231,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>60</y>
-      <w>280</w>
-      <h>90</h>
+      <x>558</x>
+      <y>54</y>
+      <w>252</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=.
 </panel_attributes>
@@ -243,10 +243,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
-      <y>340</y>
-      <w>90</w>
-      <h>40</h>
+      <x>648</x>
+      <y>306</y>
+      <w>81</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-
 </panel_attributes>
@@ -255,10 +255,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>780</x>
-      <y>350</y>
-      <w>50</w>
-      <h>170</h>
+      <x>702</x>
+      <y>315</y>
+      <w>45</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
@@ -268,10 +268,10 @@ m2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>780</x>
-      <y>480</y>
-      <w>90</w>
-      <h>40</h>
+      <x>702</x>
+      <y>432</y>
+      <w>81</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-
 </panel_attributes>
@@ -280,10 +280,10 @@ m2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>430</y>
-      <w>130</w>
-      <h>110</h>
+      <x>612</x>
+      <y>387</y>
+      <w>117</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=.
 </panel_attributes>
@@ -292,42 +292,42 @@ m2=1..*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>480</y>
-      <w>170</w>
-      <h>90</h>
+      <x>459</x>
+      <y>432</y>
+      <w>162</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>Coverage
 --
-numOfTreaments : Int
+numOfTreaments : Integer
 --
-getNumOfT() : Int
-setNumOfT(n : Int)</panel_attributes>
+getNumOfT() : Integer
+setNumOfT(n : Integer)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>820</x>
-      <y>260</y>
-      <w>170</w>
-      <h>90</h>
+      <x>738</x>
+      <y>234</y>
+      <w>153</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>PlanUsage
 --
-numUsed : Int
+numUsed : Integer
 --
-getNumUsed() : Int
-setNumUsed(n : Int)</panel_attributes>
+getNumUsed() : Integer
+setNumUsed(n : Integer)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>920</x>
-      <y>340</y>
-      <w>120</w>
-      <h>70</h>
+      <x>828</x>
+      <y>306</y>
+      <w>108</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.
 </panel_attributes>
