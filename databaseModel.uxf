@@ -48,13 +48,10 @@ postCode : String</panel_attributes>
       <h>98</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
-Calander
+Partner
 --
 partnerID : Integer «PK»
-title : String
-forename : String
-surname : String
-dateBirth : Int
+
 
 
 </panel_attributes>
