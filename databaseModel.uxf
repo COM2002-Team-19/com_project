@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7</x>
+      <y>14</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+Patient
+--
+patientID : Integer «PK»
+title : String
+forename : String
+surname : String
+dateBirth : String
+contactPhoneNo : String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7</x>
+      <y>140</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+Address
+--
+addressID : String «PK»
+houseNumber : Integer
+street : String
+district : String
+city : String
+postCode : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>14</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+Calander
+--
+partnerID : Integer «PK»
+title : String
+forename : String
+surname : String
+dateBirth : Int
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>203</x>
+      <y>14</y>
+      <w>147</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+Appointments
+--
+partnerID : Integer «FK»
+date : Date
+startTime : Integer
+endTime : Integer
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>140</y>
+      <w>147</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+Treatments
+--
+treatmentID : Integer «PK»
+treatmentName : String
+cost : Float
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
