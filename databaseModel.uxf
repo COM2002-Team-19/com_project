@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
-  <zoom_level>7</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>7</x>
-      <y>14</y>
-      <w>147</w>
-      <h>98</h>
+      <x>135</x>
+      <y>252</y>
+      <w>189</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Patient
@@ -15,7 +15,7 @@ patientID : Integer «PK»
 title : String
 forename : String
 surname : String
-dateBirth : String
+dateOfBirth : String
 contactPhoneNo : String
 </panel_attributes>
     <additional_attributes/>
@@ -23,29 +23,28 @@ contactPhoneNo : String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>7</x>
-      <y>140</y>
-      <w>147</w>
-      <h>98</h>
+      <x>135</x>
+      <y>513</y>
+      <w>189</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Address
 --
-addressID : String «PK»
-houseNumber : Integer
+houseNumber : Integer «PK»
+postCode : String «PK»
 street : String
 district : String
-city : String
-postCode : String</panel_attributes>
+city : String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>406</x>
-      <y>14</y>
-      <w>147</w>
-      <h>98</h>
+      <x>702</x>
+      <y>252</y>
+      <w>189</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Partner
@@ -60,10 +59,10 @@ partnerID : Integer «PK»
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>14</y>
-      <w>147</w>
-      <h>84</h>
+      <x>414</x>
+      <y>252</y>
+      <w>189</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Appointments
@@ -78,19 +77,105 @@ endTime : Integer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>406</x>
-      <y>140</y>
-      <w>147</w>
-      <h>84</h>
+      <x>414</x>
+      <y>513</y>
+      <w>189</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Treatments
 --
 treatmentID : Integer «PK»
-treatmentName : String
-cost : Float
+name : String
+cost : Real
 
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>369</y>
+      <w>45</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1..*
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>135</x>
+      <y>54</y>
+      <w>189</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+HealthCarePlan
+--
+planID : Integer «PK»
+name : String
+monthlyPayment : Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>135</y>
+      <w>45</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0..1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>297</y>
+      <w>126</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0..*
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>297</y>
+      <w>117</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>369</y>
+      <w>45</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
   </element>
 </diagram>
