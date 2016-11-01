@@ -255,18 +255,6 @@ r2=</panel_attributes>
     <additional_attributes>10.0;10.0;310.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>810</x>
-      <y>243</y>
-      <w>27</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>lt=.
-</panel_attributes>
-    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
       <x>297</x>
@@ -280,22 +268,6 @@ numOfTreaments : Integer
 --
 getNumOfT() : Integer
 setNumOfT(n : Integer)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>711</x>
-      <y>405</y>
-      <w>153</w>
-      <h>81</h>
-    </coordinates>
-    <panel_attributes>PlanUsage
---
-numUsed : Integer
---
-getNumUsed() : Integer
-setNumUsed(n : Integer)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
