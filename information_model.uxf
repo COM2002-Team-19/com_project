@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>100</y>
+      <w>270</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>Patient
+--
+title : String
+forename : String
+surname : String
+dateBirth : String
+contactPhoneNo : String
+--
+getTitle() : String
+getForename() : String
+getSurname() : String
+getDateBirth() : String
+getContactPhoneNo() : String
+setTitle(title : String)
+setForename(forename : String)
+setSurname(surname : String)
+setDateBirth(dateBirth : String)
+setContactPhoneNo(phoneNo : String)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1190</x>
+      <y>540</y>
+      <w>210</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Address
+--
+houseNumber : Integer
+street : String
+district : String
+city : String
+postCode : String
+--
+getHouseNumber() : Integer
+getStreet() : String
+getDistrict() : String
+getCity() : String
+getPostCode() : String
+setHouseNumber(houseNumber : integer)
+setStreet(street : String)
+setDistrict(district : String)
+setCity(city : String)
+setPostCode(postCode : String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1290</x>
+      <y>410</y>
+      <w>100</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..* 
+r1=householder
+ 
+m2=
+r2=domicile</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>540</y>
+      <w>240</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>HealthCarePlan
+--
+name : String
+monthlyPayment : Real
+--
+getName() : String
+getMonthlyPayment() : Real
+setName(name : String)
+setMonthlyPayment(payment : Real) </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1030</x>
+      <y>410</y>
+      <w>240</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=
+r1=hasHealthCarePlan
+m2=
+r2=subscribedBy
+
+</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>100</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Appointment
+--
+date: String
+startTime: Integer
+endTime:Integer
+--
+getDate() : String
+getStartTime() : Integer
+getEndTime() : Integer
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>100</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Calendar
+--
+partnerName : String
+--
+getPartner() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>90</y>
+      <w>300</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=
+r1=collectionOf
+m2=0..n
+r2=belongsTo
+</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>90</y>
+      <w>310</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+r1=patient
+m2=
+r2=appointment
+</panel_attributes>
+    <additional_attributes>10.0;20.0;290.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>390</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Treatment
+--
+name : String
+cost : Real
+--
+getName() : String
+getCost() : Real
+setName(name : String)
+setCost(cost : Real)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>220</y>
+      <w>130</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+r1=recordTreatment
+m2=0..n
+r2=perfomedOn
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+</diagram>
