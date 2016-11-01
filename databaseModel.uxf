@@ -3,8 +3,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>135</x>
-      <y>252</y>
+      <x>117</x>
+      <y>261</y>
       <w>189</w>
       <h>126</h>
     </coordinates>
@@ -23,8 +23,8 @@ contactPhoneNo : String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>135</x>
-      <y>513</y>
+      <x>117</x>
+      <y>522</y>
       <w>189</w>
       <h>126</h>
     </coordinates>
@@ -41,8 +41,8 @@ city : String</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>702</x>
-      <y>252</y>
+      <x>684</x>
+      <y>261</y>
       <w>189</w>
       <h>126</h>
     </coordinates>
@@ -50,7 +50,7 @@ city : String</panel_attributes>
 Partner
 --
 partnerID : Integer «PK»
-
+name : String	
 
 
 </panel_attributes>
@@ -59,8 +59,8 @@ partnerID : Integer «PK»
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>414</x>
-      <y>252</y>
+      <x>396</x>
+      <y>261</y>
       <w>189</w>
       <h>126</h>
     </coordinates>
@@ -77,8 +77,8 @@ endTime : Integer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>414</x>
-      <y>513</y>
+      <x>396</x>
+      <y>522</y>
       <w>189</w>
       <h>108</h>
     </coordinates>
@@ -95,8 +95,8 @@ cost : Real
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>369</y>
+      <x>198</x>
+      <y>378</y>
       <w>45</w>
       <h>162</h>
     </coordinates>
@@ -109,8 +109,8 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>135</x>
-      <y>54</y>
+      <x>117</x>
+      <y>63</y>
       <w>189</w>
       <h>90</h>
     </coordinates>
@@ -125,22 +125,22 @@ monthlyPayment : Real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>135</y>
+      <x>198</x>
+      <y>144</y>
       <w>45</w>
       <h>135</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
+    <panel_attributes>lt=&lt;-
 m1=0..1
-m2=1
+m2=0..*
 </panel_attributes>
     <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>594</x>
-      <y>297</y>
+      <x>576</x>
+      <y>306</y>
       <w>126</w>
       <h>45</h>
     </coordinates>
@@ -153,8 +153,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>315</x>
-      <y>297</y>
+      <x>297</x>
+      <y>306</y>
       <w>117</w>
       <h>45</h>
     </coordinates>
@@ -167,8 +167,8 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>495</x>
-      <y>369</y>
+      <x>477</x>
+      <y>378</y>
       <w>45</w>
       <h>162</h>
     </coordinates>
