@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
-  <zoom_level>9</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>441</y>
-      <w>189</w>
+      <x>77</x>
+      <y>343</y>
+      <w>147</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
@@ -17,34 +17,18 @@ forename : String
 surname : String
 dateOfBirth : String
 contactPhoneNo : String
+addressID : Integer «FK»
+planID : Integer «FK»
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>693</y>
-      <w>189</w>
-      <h>126</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Table&gt;&gt;
-Address
---
-houseNumber : Integer «PK»
-postCode : String «PK»
-street : String
-district : String
-city : String</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>819</x>
-      <y>441</y>
-      <w>189</w>
-      <h>126</h>
+      <x>714</x>
+      <y>343</y>
+      <w>147</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Partner
@@ -59,10 +43,10 @@ name : String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>396</x>
-      <y>441</y>
-      <w>198</w>
-      <h>126</h>
+      <x>385</x>
+      <y>343</y>
+      <w>154</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Appointment
@@ -78,10 +62,10 @@ endTime : Integer</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>819</x>
-      <y>234</y>
-      <w>189</w>
-      <h>108</h>
+      <x>714</x>
+      <y>182</y>
+      <w>147</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Treatment
@@ -96,10 +80,10 @@ cost : Real
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>81</x>
-      <y>558</y>
-      <w>99</w>
-      <h>153</h>
+      <x>140</x>
+      <y>462</y>
+      <w>77</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=1..*
@@ -107,15 +91,15 @@ r1=householder
 r2=domicile
 m2=1
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>234</y>
-      <w>189</w>
-      <h>99</h>
+      <x>77</x>
+      <y>182</y>
+      <w>147</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 HealthCarePlan
@@ -128,10 +112,10 @@ monthlyPayment : Real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>81</x>
-      <y>324</y>
-      <w>117</w>
-      <h>135</h>
+      <x>140</x>
+      <y>252</y>
+      <w>91</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=0..1
@@ -144,10 +128,10 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
-      <y>486</y>
-      <w>252</w>
-      <h>45</h>
+      <x>532</x>
+      <y>378</y>
+      <w>196</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=0..*
@@ -160,10 +144,10 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>486</y>
-      <w>234</w>
-      <h>45</h>
+      <x>217</x>
+      <y>378</y>
+      <w>182</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -176,10 +160,10 @@ m2=0..*
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>396</x>
-      <y>234</y>
-      <w>198</w>
-      <h>99</h>
+      <x>385</x>
+      <y>182</y>
+      <w>154</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 TreatmentRecord
@@ -192,10 +176,10 @@ treatmentID : Integer «FK»
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>486</x>
-      <y>324</y>
-      <w>108</w>
-      <h>135</h>
+      <x>455</x>
+      <y>252</y>
+      <w>84</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -208,10 +192,10 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
-      <y>261</y>
-      <w>252</w>
-      <h>45</h>
+      <x>532</x>
+      <y>203</y>
+      <w>196</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=0..*
@@ -224,10 +208,10 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>405</x>
-      <y>81</y>
-      <w>189</w>
-      <h>90</h>
+      <x>392</x>
+      <y>63</y>
+      <w>147</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Coverage
@@ -240,10 +224,10 @@ numOfTreatments : Integer</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
-      <y>108</y>
-      <w>414</w>
-      <h>144</h>
+      <x>532</x>
+      <y>84</y>
+      <w>322</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=0..*
@@ -256,10 +240,10 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>108</y>
-      <w>333</w>
-      <h>144</h>
+      <x>147</x>
+      <y>84</y>
+      <w>259</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -268,5 +252,24 @@ r2=covers
 m2=1..*
 </panel_attributes>
     <additional_attributes>10.0;140.0;10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>560</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+Address
+--
+addressID : Integer «PK»
+houseNumber : Integer 
+postCode : String 
+street : String
+district : String
+city : String</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
