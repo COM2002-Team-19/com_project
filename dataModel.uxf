@@ -3,8 +3,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
-      <y>441</y>
+      <x>105</x>
+      <y>490</y>
       <w>147</w>
       <h>126</h>
     </coordinates>
@@ -25,8 +25,8 @@ planID : Integer «FK»
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>721</x>
-      <y>441</y>
+      <x>742</x>
+      <y>490</y>
       <w>147</w>
       <h>98</h>
     </coordinates>
@@ -43,8 +43,8 @@ name : String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>441</y>
+      <x>413</x>
+      <y>490</y>
       <w>154</w>
       <h>98</h>
     </coordinates>
@@ -62,8 +62,8 @@ endTime : Integer</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>721</x>
-      <y>210</y>
+      <x>742</x>
+      <y>259</y>
       <w>147</w>
       <h>84</h>
     </coordinates>
@@ -80,8 +80,8 @@ cost : Real
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>147</x>
-      <y>560</y>
+      <x>168</x>
+      <y>609</y>
       <w>77</w>
       <h>112</h>
     </coordinates>
@@ -96,8 +96,8 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
-      <y>98</y>
+      <x>105</x>
+      <y>147</y>
       <w>147</w>
       <h>77</h>
     </coordinates>
@@ -112,8 +112,8 @@ monthlyPayment : Real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>147</x>
-      <y>168</y>
+      <x>168</x>
+      <y>217</y>
       <w>21</w>
       <h>98</h>
     </coordinates>
@@ -128,8 +128,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>539</x>
-      <y>476</y>
+      <x>560</x>
+      <y>525</y>
       <w>196</w>
       <h>35</h>
     </coordinates>
@@ -144,8 +144,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>224</x>
-      <y>476</y>
+      <x>245</x>
+      <y>525</y>
       <w>182</w>
       <h>35</h>
     </coordinates>
@@ -160,8 +160,8 @@ m2=0..*
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>210</y>
+      <x>413</x>
+      <y>259</y>
       <w>154</w>
       <h>77</h>
     </coordinates>
@@ -176,8 +176,8 @@ treatmentID : Integer «FK»
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>462</x>
-      <y>280</y>
+      <x>483</x>
+      <y>329</y>
       <w>84</w>
       <h>175</h>
     </coordinates>
@@ -192,8 +192,8 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>539</x>
-      <y>231</y>
+      <x>560</x>
+      <y>280</y>
       <w>196</w>
       <h>35</h>
     </coordinates>
@@ -208,8 +208,8 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>399</x>
-      <y>0</y>
+      <x>420</x>
+      <y>49</y>
       <w>147</w>
       <h>70</h>
     </coordinates>
@@ -224,8 +224,8 @@ numOfTreatments : Integer</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>539</x>
-      <y>21</y>
+      <x>560</x>
+      <y>70</y>
       <w>322</w>
       <h>203</h>
     </coordinates>
@@ -240,8 +240,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>147</x>
-      <y>21</y>
+      <x>168</x>
+      <y>70</y>
       <w>266</w>
       <h>91</h>
     </coordinates>
@@ -256,8 +256,8 @@ m2=1..*
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
-      <y>658</y>
+      <x>105</x>
+      <y>707</y>
       <w>147</w>
       <h>98</h>
     </coordinates>
@@ -275,8 +275,8 @@ city : String</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
-      <y>252</y>
+      <x>105</x>
+      <y>301</y>
       <w>147</w>
       <h>84</h>
     </coordinates>
@@ -292,8 +292,8 @@ endDate : Date</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>147</x>
-      <y>329</y>
+      <x>168</x>
+      <y>378</y>
       <w>35</w>
       <h>126</h>
     </coordinates>
