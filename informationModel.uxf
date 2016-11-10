@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1233</x>
+      <x>1179</x>
       <y>207</y>
       <w>243</w>
       <h>315</h>
@@ -37,7 +37,7 @@ unsubscribePlan()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1692</x>
+      <x>1638</x>
       <y>207</y>
       <w>243</w>
       <h>252</h>
@@ -65,7 +65,7 @@ setPostCode(postCode : String)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1467</x>
+      <x>1413</x>
       <y>198</y>
       <w>243</w>
       <h>45</h>
@@ -80,8 +80,8 @@ r2=domicile</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>846</x>
-      <y>657</y>
+      <x>801</x>
+      <y>648</y>
       <w>225</w>
       <h>99</h>
     </coordinates>
@@ -97,9 +97,9 @@ getMonthlyPayment() : Real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1062</x>
+      <x>1017</x>
       <y>513</y>
-      <w>333</w>
+      <w>324</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>lt=-
@@ -109,12 +109,12 @@ m2=0..1
 r2=healthCarePlan
 
 </panel_attributes>
-    <additional_attributes>310.0;10.0;310.0;170.0;10.0;170.0</additional_attributes>
+    <additional_attributes>300.0;10.0;300.0;170.0;10.0;170.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>585</x>
+      <x>531</x>
       <y>207</y>
       <w>414</w>
       <h>180</h>
@@ -140,7 +140,7 @@ _findByPatientPartner(patient : Patient, partner : Partner) : Appointment_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>81</x>
+      <x>27</x>
       <y>207</y>
       <w>234</w>
       <h>117</h>
@@ -158,7 +158,7 @@ getDaysAppointments() : Appointment []</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>306</x>
+      <x>252</x>
       <y>198</y>
       <w>297</w>
       <h>45</h>
@@ -167,14 +167,14 @@ getDaysAppointments() : Appointment []</panel_attributes>
 m1=1
 r1=partner
 m2=0..*
-r2=appointments
+r2=appointment
 </panel_attributes>
     <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>990</x>
+      <x>936</x>
       <y>198</y>
       <w>261</w>
       <h>45</h>
@@ -190,7 +190,7 @@ r2=patient
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>216</x>
+      <x>162</x>
       <y>828</y>
       <w>189</w>
       <h>99</h>
@@ -207,23 +207,23 @@ getCost() : Real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>306</x>
+      <x>252</x>
       <y>378</y>
-      <w>495</w>
+      <w>549</w>
       <h>468</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
 r1=appointment
 m2=0..*
-r2=treatments
+r2=treatment
 </panel_attributes>
-    <additional_attributes>460.0;10.0;460.0;50.0;10.0;50.0;10.0;500.0</additional_attributes>
+    <additional_attributes>520.0;10.0;520.0;50.0;10.0;50.0;10.0;500.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>306</x>
+      <x>252</x>
       <y>0</y>
       <w>198</w>
       <h>63</h>
@@ -237,7 +237,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>432</x>
+      <x>378</x>
       <y>54</y>
       <w>171</w>
       <h>216</h>
@@ -249,22 +249,22 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>603</x>
+      <x>549</x>
       <y>648</y>
-      <w>261</w>
+      <w>270</w>
       <h>45</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1..*
-r1=typesOfTreatment
+r1=typeOfTreatment
 m2=0..*
-r2=plans</panel_attributes>
-    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+r2=plan</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>639</x>
+      <x>594</x>
       <y>783</y>
       <w>162</w>
       <h>99</h>
@@ -279,21 +279,9 @@ getCostCov() : Real</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>711</x>
-      <y>657</y>
-      <w>27</w>
-      <h>144</h>
-    </coordinates>
-    <panel_attributes>lt=.
-</panel_attributes>
-    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>81</x>
+      <x>27</x>
       <y>405</y>
       <w>189</w>
       <h>99</h>
@@ -311,14 +299,14 @@ getCoveredCost() : Real
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>846</x>
+      <x>792</x>
       <y>504</y>
       <w>234</w>
       <h>81</h>
     </coordinates>
     <panel_attributes>TreatmentUsage
 --
-numTreatmentsLeft : Integer
+coveredTreatmentsLeft : Integer
 --
 getNumOfTreatmentLeft() : Integer
 setNumOfTreatmentLeft(n : Integer)
@@ -328,7 +316,7 @@ setNumOfTreatmentLeft(n : Integer)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>495</x>
+      <x>441</x>
       <y>261</y>
       <w>756</w>
       <h>405</h>
@@ -344,7 +332,7 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>954</x>
+      <x>900</x>
       <y>450</y>
       <w>27</w>
       <h>72</h>
@@ -356,7 +344,7 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>261</x>
+      <x>207</x>
       <y>423</y>
       <w>72</w>
       <h>36</h>
@@ -368,17 +356,15 @@ m2=0..*
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1035</x>
-      <y>63</y>
+      <x>927</x>
+      <y>36</y>
       <w>189</w>
-      <h>99</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>CourseOfTreatment
 --
-isCourseOfTreatment : Boolean
 isComplete : Boolean
 --
-isCourseOfTreatment() : Boolean
 isComplete() : Boolean
 
 
@@ -389,7 +375,7 @@ isComplete() : Boolean
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1260</x>
+      <x>1206</x>
       <y>774</y>
       <w>162</w>
       <h>99</h>
@@ -406,7 +392,7 @@ getEndtDate() : Date</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1332</x>
+      <x>1278</x>
       <y>657</y>
       <w>27</w>
       <h>135</h>
@@ -418,7 +404,7 @@ getEndtDate() : Date</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>423</x>
+      <x>369</x>
       <y>648</y>
       <w>189</w>
       <h>99</h>
@@ -435,13 +421,13 @@ getTreatments() : Treatment[]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
+      <x>342</x>
       <y>738</y>
       <w>153</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>lt=-
-r1=treatments
+r1=treatment
 m1=1..*
 r2=type
 m2=1
@@ -451,13 +437,45 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1125</x>
-      <y>153</y>
+      <x>666</x>
+      <y>657</y>
       <w>27</w>
-      <h>81</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=.
 </panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1107</x>
+      <y>54</y>
+      <w>243</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=courseOfTreatment
+m1=0..1
+r2=patient
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0;210.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>711</x>
+      <y>54</y>
+      <w>234</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=courseOfTreatment
+m1=0..1
+r2=appointment
+m2=1..*
+</panel_attributes>
+    <additional_attributes>240.0;20.0;10.0;20.0;10.0;170.0</additional_attributes>
   </element>
 </diagram>
