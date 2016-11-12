@@ -139,7 +139,7 @@ m1=1
 r2=patient
 m2=0..1
 </panel_attributes>
-    <additional_attributes>210.0;20.0;80.0;20.0;90.0;220.0;10.0;220.0</additional_attributes>
+    <additional_attributes>210.0;20.0;80.0;20.0;80.0;220.0;10.0;220.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
