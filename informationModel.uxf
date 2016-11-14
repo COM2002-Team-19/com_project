@@ -4,10 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1179</x>
+      <x>1152</x>
       <y>207</y>
       <w>243</w>
-      <h>315</h>
+      <h>261</h>
     </coordinates>
     <panel_attributes>Patient
 --
@@ -24,10 +24,6 @@ getSurname() : String
 getDateOfBirth() : Date
 getContactPhoneNo() : String
 getBalance() : Real
-setTitle(title : String)
-setForename(forename : String)
-setSurname(surname : String)
-setContactPhoneNo(phoneNo : String)
 updateBalance(amount : Real)
 subscribePlan(plan : HealthCarePlan)
 unsubscribePlan()
@@ -37,7 +33,7 @@ unsubscribePlan()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1638</x>
+      <x>1611</x>
       <y>207</y>
       <w>243</w>
       <h>252</h>
@@ -65,7 +61,7 @@ setPostCode(postCode : String)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1413</x>
+      <x>1386</x>
       <y>198</y>
       <w>243</w>
       <h>45</h>
@@ -80,7 +76,7 @@ r2=domicile</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>801</x>
+      <x>774</x>
       <y>648</y>
       <w>225</w>
       <h>99</h>
@@ -97,10 +93,10 @@ getMonthlyPayment() : Real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1017</x>
-      <y>513</y>
+      <x>990</x>
+      <y>459</y>
       <w>324</w>
-      <h>180</h>
+      <h>234</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
@@ -109,15 +105,15 @@ m2=0..1
 r2=healthCarePlan
 
 </panel_attributes>
-    <additional_attributes>300.0;10.0;300.0;170.0;10.0;170.0</additional_attributes>
+    <additional_attributes>300.0;10.0;300.0;230.0;10.0;230.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>531</x>
+      <x>504</x>
       <y>207</y>
       <w>414</w>
-      <h>180</h>
+      <h>189</h>
     </coordinates>
     <panel_attributes>Appointment
 --
@@ -131,6 +127,8 @@ getStartTime() : Time
 getEndTime() : Time
 isFinished() : Boolean
 setFinished()
+add()
+delete()
 _findByPatientPartner(patient : Patient, partner : Partner) : Appointment_
  
 
@@ -140,17 +138,17 @@ _findByPatientPartner(patient : Patient, partner : Partner) : Appointment_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>27</x>
+      <x>0</x>
       <y>207</y>
       <w>234</w>
       <h>117</h>
     </coordinates>
     <panel_attributes>Partner
 --
-partnerName : String
+name : String
 --
 getPartner() : String
-viewCal() : Appointment []
+getAllAppointments() : Appointment []
 getNextAppointment() : Appointment
 getDaysAppointments() : Appointment []</panel_attributes>
     <additional_attributes/>
@@ -158,13 +156,13 @@ getDaysAppointments() : Appointment []</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
+      <x>225</x>
       <y>198</y>
       <w>297</w>
       <h>45</h>
     </coordinates>
-    <panel_attributes>lt=-
-m1=1
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
 r1=partner
 m2=0..*
 r2=appointment
@@ -174,7 +172,7 @@ r2=appointment
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>936</x>
+      <x>909</x>
       <y>198</y>
       <w>261</w>
       <h>45</h>
@@ -190,7 +188,7 @@ r2=patient
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>162</x>
+      <x>135</x>
       <y>828</y>
       <w>189</w>
       <h>99</h>
@@ -207,10 +205,10 @@ getCost() : Real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>378</y>
+      <x>225</x>
+      <y>387</y>
       <w>549</w>
-      <h>468</h>
+      <h>459</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
@@ -218,12 +216,12 @@ r1=appointment
 m2=0..*
 r2=treatment
 </panel_attributes>
-    <additional_attributes>520.0;10.0;520.0;50.0;10.0;50.0;10.0;500.0</additional_attributes>
+    <additional_attributes>520.0;10.0;520.0;40.0;10.0;40.0;10.0;490.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>270</x>
+      <x>243</x>
       <y>0</y>
       <w>198</w>
       <h>63</h>
@@ -237,7 +235,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
+      <x>369</x>
       <y>54</y>
       <w>153</w>
       <h>216</h>
@@ -249,7 +247,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>549</x>
+      <x>522</x>
       <y>648</y>
       <w>270</w>
       <h>45</h>
@@ -264,7 +262,7 @@ r2=plan</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>594</x>
+      <x>567</x>
       <y>783</y>
       <w>162</w>
       <h>99</h>
@@ -281,7 +279,7 @@ getCostCov() : Real</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>27</x>
+      <x>0</x>
       <y>405</y>
       <w>189</w>
       <h>99</h>
@@ -299,7 +297,7 @@ getCoveredCost() : Real
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>792</x>
+      <x>765</x>
       <y>504</y>
       <w>234</w>
       <h>81</h>
@@ -316,7 +314,7 @@ setNumOfTreatmentLeft(n : Integer)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>441</x>
+      <x>414</x>
       <y>261</y>
       <w>756</w>
       <h>405</h>
@@ -332,7 +330,7 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
+      <x>873</x>
       <y>450</y>
       <w>27</w>
       <h>72</h>
@@ -344,7 +342,7 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>207</x>
+      <x>180</x>
       <y>423</y>
       <w>72</w>
       <h>36</h>
@@ -356,7 +354,7 @@ m2=0..*
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>927</x>
+      <x>900</x>
       <y>36</y>
       <w>189</w>
       <h>72</h>
@@ -375,7 +373,7 @@ isComplete() : Boolean
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1206</x>
+      <x>1179</x>
       <y>774</y>
       <w>162</w>
       <h>99</h>
@@ -392,7 +390,7 @@ getEndtDate() : Date</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1278</x>
+      <x>1251</x>
       <y>657</y>
       <w>27</w>
       <h>135</h>
@@ -404,7 +402,7 @@ getEndtDate() : Date</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>369</x>
+      <x>342</x>
       <y>648</y>
       <w>189</w>
       <h>99</h>
@@ -421,23 +419,23 @@ getTreatments() : Treatment[]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
+      <x>315</x>
       <y>738</y>
       <w>153</w>
       <h>126</h>
     </coordinates>
-    <panel_attributes>lt=-
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
 r1=treatment
 m1=1..*
 r2=type
-m2=1
+
 </panel_attributes>
     <additional_attributes>10.0;110.0;130.0;110.0;130.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>666</x>
+      <x>639</x>
       <y>657</y>
       <w>27</w>
       <h>144</h>
@@ -449,23 +447,7 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1107</x>
-      <y>54</y>
-      <w>243</w>
-      <h>171</h>
-    </coordinates>
-    <panel_attributes>lt=-
-r1=courseOfTreatment
-m1=0..1
-r2=patient
-m2=1
-</panel_attributes>
-    <additional_attributes>10.0;20.0;210.0;20.0;210.0;170.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>711</x>
+      <x>684</x>
       <y>54</y>
       <w>234</w>
       <h>171</h>
@@ -477,5 +459,21 @@ r2=appointment
 m2=1..*
 </panel_attributes>
     <additional_attributes>240.0;20.0;10.0;20.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>54</y>
+      <w>243</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=courseOfTreatment
+m1=0..1
+r2=patient
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0;210.0;170.0</additional_attributes>
   </element>
 </diagram>

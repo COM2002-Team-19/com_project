@@ -4,39 +4,38 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>736</y>
+      <x>352</x>
+      <y>728</y>
       <w>168</w>
       <h>168</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Patient
 --
-patientID : Integer «PK»
-title : String
-forename : String
-surname : String
+patientID : Integer[10] «PK»
+title : String[6]
+forename : String[50]
+surname : String[50]
 dateOfBirth : Date
-contactPhoneNo : String
+phoneNo : String[15]
 balance : Real
-houseNumber : Integer «FK»
-postCode : String «FK»
+houseNumber : Integer[5] «FK»
+postCode : String[10] «FK»
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1392</x>
-      <y>736</y>
+      <x>1320</x>
+      <y>728</y>
       <w>168</w>
-      <h>72</h>
+      <h>56</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Partner
 --
-partnerID : Integer «PK»
-name : String	
+name : String[30] «PK»
 
 
 </panel_attributes>
@@ -45,27 +44,27 @@ name : String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
-      <y>736</y>
+      <x>984</x>
+      <y>728</y>
       <w>176</w>
-      <h>136</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Appointment
 --
-appointmentID : Integer «PK»
-partnerID : Integer «FK»
+appointmentID : Integer[10] «PK»
+partner : String[30] «FK»
 date : Date
-startTime : Integer
-endTime : Integer
+startTime : Time
+endTime : Time
 finish : Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>200</x>
-      <y>768</y>
+      <x>160</x>
+      <y>744</y>
       <w>208</w>
       <h>40</h>
     </coordinates>
@@ -80,26 +79,25 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>160</y>
+      <x>352</x>
+      <y>152</y>
       <w>168</w>
-      <h>88</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 HealthCarePlan
 --
-planID : Integer «PK»
-name : String
+name : String[30] «PK»
 monthlyPayment : Real</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>240</y>
+      <x>424</x>
+      <y>216</y>
       <w>136</w>
-      <h>192</h>
+      <h>208</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r1=plan
@@ -107,31 +105,31 @@ m1=1
 r2=isSubscribedbyPatient
 m2=0..*
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1192</x>
-      <y>752</y>
-      <w>216</w>
+      <x>1152</x>
+      <y>744</y>
+      <w>184</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
+    <panel_attributes>lt=-&gt;
 r1=appointment
 m1=0..*
 r2=partner
-m2=
+m2=1
 </panel_attributes>
-    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>856</x>
-      <y>768</y>
-      <w>184</w>
-      <h>200</h>
+      <x>848</x>
+      <y>744</y>
+      <w>152</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r1=appointment
@@ -139,21 +137,21 @@ m1=1
 r2=patient
 m2=0..1
 </panel_attributes>
-    <additional_attributes>210.0;20.0;80.0;20.0;80.0;220.0;10.0;220.0</additional_attributes>
+    <additional_attributes>170.0;20.0;90.0;20.0;90.0;240.0;10.0;240.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
-      <y>512</y>
-      <w>176</w>
+      <x>984</x>
+      <y>504</y>
+      <w>184</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 TreatmentRecord
 --
-appointmentID : Integer «FK»
-treatmentID : Integer «FK»
+appointmentID : Integer[10] «FK» «PK»
+treatment : String[30] «FK» «PK»
 outstandingCost : Real
 coveredCost : Real</panel_attributes>
     <additional_attributes/>
@@ -161,8 +159,8 @@ coveredCost : Real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1104</x>
-      <y>600</y>
+      <x>1064</x>
+      <y>592</y>
       <w>80</w>
       <h>152</h>
     </coordinates>
@@ -177,10 +175,10 @@ m2=0..*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1104</x>
+      <x>1064</x>
       <y>368</y>
       <w>88</w>
-      <h>160</h>
+      <h>152</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=0..*
@@ -188,21 +186,21 @@ r1=administered
 r2=treatment
 m2=1
 </panel_attributes>
-    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>656</x>
       <y>0</y>
-      <w>168</w>
+      <w>200</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Coverage
 --
-planID : Integer «FK»
-treatmentID : Integer «FK»
+plan : String «FK» «PK»
+typeOfTreatment : String «FK» «PK»
 numOfTreatments : Integer
 costCovered : Real</panel_attributes>
     <additional_attributes/>
@@ -210,9 +208,9 @@ costCovered : Real</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
-      <y>24</y>
-      <w>360</w>
+      <x>848</x>
+      <y>16</y>
+      <w>288</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -221,14 +219,14 @@ r1=coveredBy
 r2=treatment
 m2=1
 </panel_attributes>
-    <additional_attributes>10.0;20.0;370.0;20.0;370.0;100.0</additional_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0;280.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>24</y>
-      <w>208</w>
+      <x>424</x>
+      <y>16</y>
+      <w>248</w>
       <h>152</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -237,39 +235,39 @@ r1=plan
 r2=covers
 m2=1..*
 </panel_attributes>
-    <additional_attributes>10.0;170.0;10.0;20.0;240.0;20.0</additional_attributes>
+    <additional_attributes>10.0;170.0;10.0;20.0;290.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>736</y>
+      <x>0</x>
+      <y>728</y>
       <w>168</w>
       <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Address
 --
-houseNumber : Integer «PK»
-postCode : String «PK»
-street : String
-district : String
-city : String</panel_attributes>
+houseNumber : Integer[5] «PK»
+postCode : String[10] «PK»
+street : String[30]
+district : String[30]
+city : String[30]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>416</y>
-      <w>168</w>
+      <x>352</x>
+      <y>408</y>
+      <w>184</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 PatientPlan
 --
-patientID : Integer &lt;&lt;FK&gt;&gt;
-planID : Integer &lt;&lt;FK&gt;&gt;
+patientID : Integer[10] «FK» «PK»
+plan: String[30] «FK» 
 startDate : Date
 endDate : Date</panel_attributes>
     <additional_attributes/>
@@ -277,8 +275,8 @@ endDate : Date</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>504</y>
+      <x>424</x>
+      <y>496</y>
       <w>112</w>
       <h>248</h>
     </coordinates>
@@ -293,17 +291,16 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1032</x>
-      <y>104</y>
+      <x>992</x>
+      <y>96</y>
       <w>168</w>
-      <h>88</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 TypeOfTreatment
 --
-typeID : integer
-type : String
-duration : Int
+name : String[30] «PK»
+duration : Int[3]
 
 </panel_attributes>
     <additional_attributes/>
@@ -311,17 +308,17 @@ duration : Int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1032</x>
-      <y>288</y>
-      <w>168</w>
-      <h>88</h>
+      <x>992</x>
+      <y>296</y>
+      <w>184</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 Treatment
 --
-treatmentID : Integer «PK»
-name : String
+name : String[30] «PK»
 cost : Real
+typeOfTreatment : String[30] «FK»
 
 </panel_attributes>
     <additional_attributes/>
@@ -329,30 +326,31 @@ cost : Real
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1104</x>
-      <y>184</y>
+      <x>1064</x>
+      <y>160</y>
       <w>104</w>
-      <h>120</h>
+      <h>152</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+    <panel_attributes>lt=&lt;-
 r1=typeOfTreatment
+m1=1
 r2=treatment
 m2=0..*</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>616</x>
-      <y>1136</y>
-      <w>192</w>
+      <x>648</x>
+      <y>1096</y>
+      <w>216</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 CourseOfTreatment
 --
-courseOfTreatmentID: Integer «PK»
-patientID: Integer «FK»
+courseOfTreatmentID: Integer[10] «PK»
+patientID: Integer[10] «FK»
 isComplete : Boolean
 </panel_attributes>
     <additional_attributes/>
@@ -360,32 +358,32 @@ isComplete : Boolean
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>552</x>
-      <y>496</y>
-      <w>296</w>
-      <h>280</h>
+      <x>512</x>
+      <y>488</y>
+      <w>336</w>
+      <h>296</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r2=coveredTreatments
 m2=0..*
 r1=beneficiary
 m1=1</panel_attributes>
-    <additional_attributes>10.0;320.0;230.0;320.0;230.0;10.0</additional_attributes>
+    <additional_attributes>10.0;340.0;280.0;340.0;280.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>656</x>
-      <y>416</y>
-      <w>168</w>
+      <x>632</x>
+      <y>408</y>
+      <w>216</w>
       <h>88</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 CoveredTreatment
 --
-typeID : Integer «FK»
-patientID : Integer «FK»
-coveredTreatmentsLeft : Integer
+typeOfTreatment : String[30] «FK» «PK»
+patientID : Integer[10] «FK» «PK»
+coveredTreatmentsLeft : Integer[3]
 
 
 </panel_attributes>
@@ -395,60 +393,45 @@ coveredTreatmentsLeft : Integer
     <id>Relation</id>
     <coordinates>
       <x>728</x>
-      <y>136</y>
-      <w>320</w>
-      <h>296</h>
+      <y>112</y>
+      <w>280</w>
+      <h>312</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r1=typeOftreatment
 m1=1
 r2=numberOfCoveredTreatments
 m2=0..*</panel_attributes>
-    <additional_attributes>380.0;20.0;10.0;20.0;10.0;350.0</additional_attributes>
+    <additional_attributes>330.0;20.0;10.0;20.0;10.0;370.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>896</y>
-      <w>168</w>
-      <h>296</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-r1=patient
-m1=1
-r2=courseOfTreatment
-m2=0..1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;340.0;190.0;340.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1104</x>
-      <y>864</y>
+      <x>1064</x>
+      <y>840</y>
       <w>120</w>
-      <h>144</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 r1=courseOfTreatment
 m1=1..0
 r2=appointment
 m2=1</panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
-      <y>992</y>
+      <x>984</x>
+      <y>984</y>
       <w>192</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
-AppointmentsPerCourse
+AppointmentsPerCourseOfTreatment
 --
-courseOfTreatmentID: Integer «FK»
-appointmentID : Integer «FK»
+courseOfTreatmentID: Integer[10] «FK»
+appointmentID : Integer[10] «FK»
 
 </panel_attributes>
     <additional_attributes/>
@@ -456,31 +439,31 @@ appointmentID : Integer «FK»
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>1056</y>
-      <w>384</w>
-      <h>136</h>
+      <x>856</x>
+      <y>1048</y>
+      <w>288</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 r1=courseOfTreatment
 m1=1
 r2=appointment
 m2=1..*</panel_attributes>
-    <additional_attributes>10.0;140.0;390.0;140.0;390.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;270.0;100.0;270.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>672</x>
-      <y>912</y>
-      <w>192</w>
+      <x>648</x>
+      <y>904</y>
+      <w>208</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Table&gt;&gt;
 AppointmentsPerPatient
 --
-patientID: Integer «FK»
-appointmentID : Integer «FK»
+patientID: Integer[10] «FK» «PK»
+appointmentID : Integer[10] «FK» «PK»
 
 </panel_attributes>
     <additional_attributes/>
@@ -488,10 +471,10 @@ appointmentID : Integer «FK»
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>552</x>
-      <y>768</y>
-      <w>136</w>
-      <h>200</h>
+      <x>512</x>
+      <y>792</y>
+      <w>152</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r1=patient
@@ -499,6 +482,21 @@ m1=1
 r2=appointments
 m2=0..*
 </panel_attributes>
-    <additional_attributes>10.0;20.0;60.0;20.0;60.0;220.0;150.0;220.0</additional_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0;60.0;180.0;170.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>424</x>
+      <y>888</y>
+      <w>240</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=patient
+m1=1
+r2=courseOfTreatment
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0;280.0;300.0</additional_attributes>
   </element>
 </diagram>
